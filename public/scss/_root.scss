@@ -1,0 +1,91 @@
+@import "color";
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Roboto";
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: black;
+}
+h2 {
+    line-height: 120%;
+    font-size: 3.125rem;
+}
+h3 {
+    font-size: min(6vw, 1.875rem);
+}
+p {
+    font-size: min(4.5vw, 1.5625rem);
+    margin-bottom: 0.625rem;
+    line-height: 120%;
+}
+
+section {
+    overflow: hidden;
+    height: 100vh;
+    padding: 3.125rem 1.25rem 1.875rem 1.25rem;
+    h2 {
+        font-weight: bold;
+        text-align: center;
+        margin: 1.875rem 0;
+    }
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type="email"],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    opacity: 80%;
+}
+footer {
+    background-color: $primary;
+    color: white;
+
+    p {
+        font-size: 20px;
+    }
+    a {
+        &:nth-child(2) {
+            margin: 0 10px;
+        }
+        font-size: 30px;
+    }
+    padding: 20px;
+    .d-flex {
+        justify-content: space-between;
+    }
+}

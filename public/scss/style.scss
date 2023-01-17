@@ -1,0 +1,324 @@
+@import "cssreset";
+@import "basic";
+@import "color";
+@import "fontface";
+@import "root";
+@import "animation";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+#navbar {
+    padding: 0px 0px 20px 0;
+    height: 100px;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    transition: all 0.5s;
+    font-family: "Montserrat";
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+
+    #nav-toggle {
+        display: none;
+    }
+    .display {
+        display: none;
+    }
+    .logo {
+        font-family: "Inspiration";
+        font-size: 5rem;
+        color: $primary;
+        font-weight: 500;
+        margin: 0 1.25rem;
+        padding: 0.625rem;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    .icon-bars {
+        font-size: 2.5rem;
+        margin-top: 1.25rem;
+        margin-right: 0.625rem;
+        display: none;
+        cursor: pointer;
+    }
+    .nav-item {
+        color: black;
+        padding: 0.625rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .list {
+            font-size: min(3vw, 1.25rem);
+            text-align: center;
+            margin: 0 1.25rem;
+            padding: 1.25rem 0;
+            &:hover {
+                border-bottom: 5px solid $primary;
+            }
+            &.active {
+                border-bottom: 5px solid $primary;
+            }
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .logo {
+            font-size: 3.75rem;
+        }
+        .icon-bars {
+            display: block;
+            float: right;
+        }
+        .display {
+            display: inline-block;
+        }
+        .nav-item {
+            background-color: #ffffff;
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            left: -110%;
+            flex-direction: column;
+            justify-content: flex-start;
+            transition: 0.5s;
+
+            .logo {
+                display: none;
+            }
+        }
+        li {
+            margin: 20px 0;
+        }
+    }
+    #nav-toggle {
+        &:checked ~ .nav-item {
+            left: 0;
+        }
+    }
+}
+
+#hero::after {
+    content: "";
+    clear: both;
+}
+
+#hero {
+    background-image: url("/assets/hero-background.svg");
+    background-size: cover;
+    font-family: "Montserrat";
+    padding: 0;
+
+    h2 {
+        font-size: 6.25rem;
+    }
+    p {
+        text-align: center;
+        font-size: 5rem;
+        color: $primary;
+        padding: 5px;
+    }
+
+    .hero-text {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-name {
+        border-right: 5px solid $primary;
+        animation: blink 0.7s infinite;
+    }
+
+    @keyframes blink {
+        50% {
+            border-color: transparent;
+        }
+        100% {
+            border-color: $primary;
+        }
+    }
+
+    .hero-logo {
+        flex: 1;
+        position: relative;
+        img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            max-height: 100%;
+            height: auto;
+            max-width: 550px;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .content {
+            flex-direction: column;
+            .hero-logo {
+                img {
+                    position: relative;
+                    float: right;
+                }
+            }
+
+            .hero-text {
+                flex: 1;
+            }
+        }
+        p {
+            font-size: min(12vw, 3.125rem) !important;
+        }
+    }
+}
+
+#about {
+    background-color: #d3d3d321;
+    p {
+        font-size: min(6vw, 2rem);
+    }
+
+    .text {
+        align-self: center;
+        flex: 1;
+        p:last-child {
+            opacity: 0;
+            animation: fade-bottom 1s 2.5s ease-in forwards;
+        }
+
+        p:nth-child(1) {
+            opacity: 0;
+            animation: fade-bottom 1s 0.5s ease-in forwards;
+        }
+        span {
+            color: $primary;
+            font-weight: bold;
+        }
+    }
+
+    .image {
+        align-self: stretch;
+
+        img {
+            max-width: 55%;
+        }
+        position: relative;
+        flex: 1;
+        .img1 {
+            opacity: 0;
+            animation: fade-left 1s 1.5s ease-in forwards;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-bottom: 20px;
+        }
+        .img2 {
+            opacity: 0;
+            animation: fade-right 1s 2s ease-in forwards;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+    @media (max-width: 1200px) {
+        p {
+            font-size: min(6vw, 1.875rem);
+        }
+        .content {
+            flex-direction: column-reverse;
+        }
+        .text {
+            margin-top: 1.25rem;
+        }
+        .image {
+            img {
+                height: auto;
+                max-height: 60%;
+            }
+        }
+    }
+    @keyframes identifier {
+    }
+}
+
+#skills {
+    .card {
+        max-height: 80%;
+        height: auto;
+        flex: 1;
+        margin: 1.875rem;
+        h3 {
+            margin-bottom: 0.625rem;
+        }
+    }
+    .display-left {
+        top: 60%;
+    }
+    .display-right {
+        top: 60%;
+    }
+    button {
+        display: none;
+        font-size: min(6vw, 1.875rem);
+    }
+    @media (max-width: 1200px) {
+        .content {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+        .card {
+            margin: 1.875rem 10px;
+            max-height: 90%;
+            width: 95%;
+            flex: 0 0 auto;
+        }
+
+        button {
+            display: block;
+        }
+    }
+}
+
+#portfolio {
+}
+#contact {
+    .social {
+        width: 100%;
+        a {
+            flex: 1;
+            margin: 2rem auto;
+            .d-flex-column {
+                align-items: center;
+            }
+
+            p {
+                font-size: min(3vw, 1.25rem);
+            }
+            i {
+                margin-bottom: 0.625rem;
+                font-size: min(10vw, 3.75rem);
+            }
+        }
+    }
+    form {
+        margin-top: 1.25rem;
+        width: 60%;
+        flex: 1;
+        @media (max-width: 1200px) {
+            width: 90%;
+        }
+    }
+    #name,
+    #email,
+    #message,
+    input[type="submit"] {
+        font-size: min(3vw, 1.25rem);
+    }
+}
