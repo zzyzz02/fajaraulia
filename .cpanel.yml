@@ -2,7 +2,5 @@
 ---
 deployment:
   tasks:
-    - export ROOTPATH=/home/fajaraul/laravel/
-    - export DEPLOYPATH=/home/fajaraul/public_html/
-    - /bin/cp -R public $DEPLOYPATH
-    - /bin/cp -R laravel $ROOTPATH
+    - export DEPLOYPATH=/home/fajaraul/laravel/
+    - /bin/cp -R laravel $DEPLOYPATH
