@@ -4,4 +4,4 @@ deployment:
     - export DEPLOYPATH=/home/fajaraul/laravel/
     - export PUBLIC=/home/fajaraul/public_html/
     - /bin/cp -R * $DEPLOYPATH
-    - /bin/cp -R */public $PUBLIC
+    - /bin/cp -R public/* $PUBLIC
