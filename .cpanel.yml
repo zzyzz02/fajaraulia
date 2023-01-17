@@ -1,0 +1,8 @@
+---
+---
+deployment:
+  tasks:
+    - export ROOTPATH=/home/fajaraul/laravel/
+    - export DEPLOYPATH=/home/example/public_html/
+    - /bin/cp -R public $DEPLOYPATH
+    - /bin/cp -R $ROOTPATH
