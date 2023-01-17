@@ -31,11 +31,11 @@ if (file_exists($maintenance = __DIR__ . '/../storage/framework/maintenance.php'
 |
 */
 
-require __DIR__ . '/../larvel/vendor/autoload.php';
+require __DIR__ . '/../laravel/vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
-| Run The Application
+| Run The Applicationgi
 |--------------------------------------------------------------------------
 |
 | Once we have the application, we can handle the incoming request using
