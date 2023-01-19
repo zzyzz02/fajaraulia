@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fajar Aulia</title>
+    <title>{{ isset($title) ? 'Fajar Aulia |' + $title : 'Fajar Aulia' }}</title>
     <link rel="stylesheet" href="{{ url('scss/style.css') }}">
 </head>
 
@@ -22,7 +22,7 @@
                     <li class="list"><a href="#about">About</a></li>
                     <li class="list"><a href="#skills">Skills</a></li>
                     <h1><a class="logo" href="#hero">FajarAulia</a></h1>
-                    <li class="list"><a href="#portfolio">Portfolio</a></li>
+                    <li class="list"><a href={{ isset($title) ? '/portfolio' : '#portfolio' }}>Portfolio</a></li>
                     <li class="list"><a href="#contact">Contact</a></li>
                 </ul>
 

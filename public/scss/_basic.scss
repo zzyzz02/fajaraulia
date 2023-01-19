@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import "color";
 .text-center {
     text-align: center;
@@ -12,21 +19,25 @@
 }
 
 .d-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .d-flex-column {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 
 //media 1200
-@media (max-width: 1200px) {
-    h2 {
-        font-size: min(12vw, 50px) !important;
-    }
-}
 
 .flex-50 {
+    -webkit-box-flex: 50%;
+    -ms-flex: 50%;
     flex: 50%;
 }
 .my-auto {
@@ -38,9 +49,15 @@
 }
 .content {
     height: 100%;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     @media (max-width: 1200px) {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
 }
@@ -49,7 +66,7 @@
     display: table;
     margin: 0 auto;
     background-color: $primary;
-    // font-weight: bold;
+
     color: #ffffff;
     font-size: min(5vw, 1.875rem);
 }
@@ -64,6 +81,7 @@
 
 .card {
     padding: 20px;
+    -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -93,6 +111,7 @@
     position: absolute;
     top: 50%;
     left: 0%;
+    -webkit-transform: translate(0%, -50%);
     transform: translate(0%, -50%);
     -ms-transform: translate(-0%, -50%);
 }
@@ -100,8 +119,19 @@
     position: absolute;
     top: 50%;
     right: 0%;
+    -webkit-transform: translate(0%, -50%);
     transform: translate(0%, -50%);
     -ms-transform: translate(0%, -50%);
+}
+
+.display-bottom-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.display-bottom {
+    position: absolute;
+    bottom: 0;
 }
 
 .button {
@@ -110,6 +140,8 @@
     background-color: $primary;
     color: #ffffff;
     border-radius: 5px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
     padding: 10px;
     &:active {
@@ -118,8 +150,12 @@
 }
 
 .align-items-center {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 .flex-1 {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
 }

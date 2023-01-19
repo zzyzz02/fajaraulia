@@ -1,8 +1,17 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import "color";
+
 html {
     scroll-behavior: smooth;
 }
 body {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     font-family: "Roboto";
 }
 
@@ -13,7 +22,7 @@ a {
 }
 h2 {
     line-height: 120%;
-    font-size: 3.125rem;
+    font-size: min(8vw, 3.125rem);
 }
 h3 {
     font-size: min(6vw, 1.875rem);
@@ -33,6 +42,7 @@ section {
         text-align: center;
         margin: 1.875rem 0;
     }
+    -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -44,6 +54,7 @@ select {
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 input[type="email"],
@@ -54,6 +65,7 @@ select {
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -76,16 +88,18 @@ footer {
     color: white;
 
     p {
-        font-size: 20px;
+        font-size: min(4vw, 1.25rem);
     }
     a {
         &:nth-child(2) {
             margin: 0 10px;
         }
-        font-size: 30px;
+        font-size: min(5vw, 1.875rem);
     }
     padding: 20px;
     .d-flex {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
     }
 }

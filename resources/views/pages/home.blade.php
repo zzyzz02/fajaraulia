@@ -133,13 +133,15 @@
         <button id="13" class="button display-right" onclick="scrollRight()">&#10095;</button>
 
     </section>
-    <section id="portfolio" class="reveal fade-bottom container-fluid d-flex-column">
+    <section id="portfolio" class="reveal fade-bottom container-fluid d-flex-column align-items-center">
 
         <span class="text-center; heading">Portfolio</span>
         <h2>My Recent Work</h2>
         <div class="content">
 
         </div>
+        <a class="display-bottom bg-primary text-color-white" href="/portfolio">
+            View More..</a>
 
     </section>
     <section id="contact" class="reveal fade-bottom container-fluid d-flex-column">
