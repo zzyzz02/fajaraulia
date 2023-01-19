@@ -138,7 +138,8 @@
         <span class="text-center; heading">Portfolio</span>
         <h2>My Recent Work</h2>
         <div class="content">
-
+            @foreach ($portfolio as $item)
+            @endforeach
         </div>
         <a class="display-bottom bg-primary text-color-white" href="/portfolio">
             View More..</a>

@@ -1,5 +1,6 @@
 <?php
 
+use Faker\Provider\Lorem;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('pages/home');
+    $portfolio = [
+        [
+            "title" => "Judul Pos 1",
+            "body" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus incidunt optio odio placeat? Cum dignissimos asperiores sunt nisi, voluptate corporis ut quibusdam atque debitis soluta quam eius dolorum quis magni!"
+        ],
+        [
+            "title" => "Judul Pos 2",
+            "body" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos delectus nobis fugiat repellendus r"
+        ],
+        [
+            "title" => "Judul Pos 3",
+            "body" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos delectus nobis fugiat repellendus reprehenderit s"
+        ]
+    ];
+    return view('pages/home', [
+        "portfolio" => $portfolio
+    ]);
 });
