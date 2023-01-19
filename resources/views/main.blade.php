@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ isset($title) ? 'Fajar Aulia |' + $title : 'Fajar Aulia' }}</title>
     <link rel="stylesheet" href="{{ url('scss/style.css') }}">
+    <link rel="icon" href="{{ url('favicon.ico') }}" type="image/x-icon" />
 </head>
 
 <body>
